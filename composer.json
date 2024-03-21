@@ -14,6 +14,7 @@
         }
     ],
     "require": {
-        "ponponumi/url_search": "^1.0"
+        "ponponumi/url_search": "^1.0",
+        "ponponumi/email_search": "^1.0"
     }
 }
