@@ -25,13 +25,13 @@ class Web{
           // リンクがあれば
           if(UrlSearch::check($item["link"])){
             // URLなら
-            $html .= '<a href="' . self:::esc($item["link"]) . '">' . self:::esc($item["text"]) . '</a>';
+            $html .= '<a href="' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
           }elseif(EmailSearch::check($item["link"])){
-            $html .= '<a href="mailto:' . self:::esc($item["link"]) . '">' . self:::esc($item["text"]) . '</a>';
+            $html .= '<a href="mailto:' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
           }
         }else{
           // リンクがなければ
-          $html .= self:::esc($item["text"]);
+          $html .= self::esc($item["text"]);
         }
       }
     }
