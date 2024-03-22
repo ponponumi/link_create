@@ -47,6 +47,40 @@ class Core{
 
     if($list !== []){
       // リンクがあれば
+      $end = 0;
+
+      foreach ($list as $item) {
+        $pos = $item["pos"];
+        $len = mb_strlen($item["value"]);
+
+        if($end <= $pos){
+          // 二重取得になっていなければ
+          if($end !== $pos){
+            // 途中にテキストがあれば
+            $result[] = [
+              "text" => mb_substr($text,$end,$pos - $end),
+              "link" => null,
+            ];
+          }
+
+          $result[] = [
+            "text" => $item["value"],
+            "link" => $item["value"],
+          ];
+
+          $end = $pos + $len;
+        }
+
+      }
+
+      $text_len = mb_strlen($text);
+
+      if($text_len > $end){
+        $result[] = [
+          "text" => mb_substr($text,$end),
+          "link" => null,
+        ];
+      }
     }else{
       // リンクがなければ
       $result[] = [
