@@ -38,4 +38,23 @@ class Core{
 
     return $merge_list;
   }
+
+  public static function arrangement(string $text,array $type=["email","url"]){
+    // データを整理する
+    $result = [];
+
+    $list = self::get($text,$type);
+
+    if($list !== []){
+      // リンクがあれば
+    }else{
+      // リンクがなければ
+      $result[] = [
+        "text" => $text,
+        "link" => null,
+      ];
+    }
+
+    return $result;
+  }
 }
