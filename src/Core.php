@@ -35,5 +35,7 @@ class Core{
         return $a["pos"] <=> $b["pos"];
       });
     }
+
+    return $merge_list;
   }
 }
