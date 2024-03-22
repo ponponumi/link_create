@@ -27,5 +27,13 @@ class Core{
       // URLを取得するなら
       $url_list = UrlSearch::searchPos($text);
     }
+
+    $merge_list = array_merge($email_list,$url_list);
+
+    if($merge_list != []){
+      usort($merge_list, function($a,$b){
+        return $a["pos"] <=> $b["pos"];
+      });
+    }
   }
 }
