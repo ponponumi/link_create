@@ -9,4 +9,22 @@ class Web{
     $text = str_replace([" ","\n"],["&nbsp;","<br>"],$text);
     return $text;
   }
+
+  public static function create(string $text,array $get=["email","url"]){
+    // aタグを作る
+    $list = Core::arrangement($text,$get);
+
+    $html = "";
+
+    if($list !== []){
+      foreach ($list as $item) {
+        if($item["link"] !== null){
+          // リンクがあれば
+        }else{
+          // リンクがなければ
+          $html .= self:::esc($item["text"]);
+        }
+      }
+    }
+  }
 }
