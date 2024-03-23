@@ -77,6 +77,9 @@ class Web{
     // 2は常に有効
     $url_blank_mode = self::optionGet("blankMode",$option,1);
 
+    // 内部のURLを設定
+    $url_internal = self::optionGet("internalUrl",$option,"");
+
     // ハッシュの記号を消すかどうか
     $hash_delete = self::optionGet("hashDelete",$option,true);
 
