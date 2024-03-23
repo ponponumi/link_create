@@ -14,7 +14,7 @@
 
 例えば、上記の文字列を、下記のHTMLに変換します！
 
-<code>
+<pre>
   私のメールアドレスは、&amp;nbsp;
   &lt;a href=&quot;mailto:hoge@example.com&quot;&gt;
     hoge@example.com
@@ -24,4 +24,4 @@
     https://example.com
     &lt;/a&gt;
   &amp;nbsp;です！
-</code>
+</pre>
