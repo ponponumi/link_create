@@ -55,6 +55,9 @@ class Web{
       $get[] = "url";
     }
 
+    // ハッシュの記号を消すかどうか
+    $hash_delete = self::optionGet("hashDelete",$option,true);
+
     $list = Core::arrangement($text,$get);
 
     $html = "";
