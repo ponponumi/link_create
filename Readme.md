@@ -34,6 +34,24 @@ composer require ponponumi/link_create
   &amp;nbsp;です！
 </pre>
 
+## 使い方について
+
+### HTMLとして取得する場合
+
+HTMLとして取得する場合、次の方法で取得可能です
+
+```php
+use Ponponumi\LinkCreate\Web;
+
+$text = "私は、PHPのサーバーサイド開発の方が好きかな #プログラミング #PHP";
+
+// aタグを生成
+$a = Web::create($text,[
+  "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
+]);
+
+```
+
 ## ライセンスについて
 
 このパッケージは、MITライセンスとして作成されています。
