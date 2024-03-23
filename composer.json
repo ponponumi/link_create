@@ -17,6 +17,7 @@
         "ponponumi/url_search": "^1.0",
         "ponponumi/email_search": "^1.0",
         "ponponumi/match_pos": "^1.0",
-        "piscibus/php-hashtag": "^1.1"
+        "piscibus/php-hashtag": "^1.1",
+        "ponponumi/url_tool": "^1.0"
     }
 }
