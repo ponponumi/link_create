@@ -41,6 +41,13 @@ class Web{
       }
     }
 
+    $email_not = self::optionGet("emailNotGet",$option);
+
+    if(!$email_not){
+      // メールアドレスを取得するなら
+      $get[] = "email";
+    }
+
     $list = Core::arrangement($text,$get);
 
     $html = "";
