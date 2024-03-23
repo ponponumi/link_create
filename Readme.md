@@ -53,6 +53,15 @@ $option = [
 // aタグを生成
 $a = Web::create($text,$option);
 
+// 出力結果
+
+/*
+私は、PHPのサーバーサイド開発の方が好きかな&nbsp;
+<a href="http://localhost:2230/search.php?tag=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">#プログラミング</a>
+&nbsp;
+<a href="http://localhost:2230/search.php?tag=PHP">#PHP</a>
+*/
+
 ```
 
 ## ライセンスについて
