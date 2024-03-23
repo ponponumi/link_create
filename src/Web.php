@@ -71,6 +71,12 @@ class Web{
       $get[] = "url";
     }
 
+    // URLのblankモードを設定
+    // 0は常に無効(非推奨)
+    // 1は外部リンクの場合のみ有効
+    // 2は常に有効
+    $url_blank_mode = self::optionGet("blankMode",$option,1);
+
     // ハッシュの記号を消すかどうか
     $hash_delete = self::optionGet("hashDelete",$option,true);
 
