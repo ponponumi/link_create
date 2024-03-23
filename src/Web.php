@@ -70,6 +70,17 @@ class Web{
     return $result;
   }
 
+  public static function blankSpace(string $url,string $internal,$mode){
+    // blankのスペースを追加
+    $blank = self::blank($url,$internal,$mode);
+
+    if($blank !== ""){
+      $blank = " " . $blank . " ";
+    }
+
+    return $blank;
+  }
+
   public static function create(string $text,array $option=[]){
     // aタグを作る
     $get = [];
