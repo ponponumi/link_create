@@ -48,6 +48,13 @@ class Web{
       $get[] = "email";
     }
 
+    $url_not = self::optionGet("urlNotGet",$option);
+
+    if(!$url_not){
+      // URLを取得するなら
+      $get[] = "url";
+    }
+
     $list = Core::arrangement($text,$get);
 
     $html = "";
