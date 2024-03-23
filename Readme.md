@@ -25,3 +25,11 @@
   &lt;/a&gt;
   &amp;nbsp;です！
 </pre>
+
+## ライセンスについて
+
+このパッケージは、MITライセンスとして作成されています。
+
+このパッケージは、ponponumiが作成したパッケージの他、
+<a href="https://github.com/piscibus/php-hashtag">piscibus様が制作した、PHP Hashtag</a>
+を使用しています。 
