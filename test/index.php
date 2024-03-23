@@ -2,7 +2,7 @@
 
 <?php
 
-$text = "hello@example.com hoge@example.com http://example.com https://example.com #PHP #こんにちは";
+$text = "hello@example.com hoge@example.com http://example.com https://example.com http://localhost:2230/ #PHP #こんにちは";
 $get = \Ponponumi\LinkCreate\Core::get($text);
 $list = \Ponponumi\LinkCreate\Core::arrangement($text);
 $a = \Ponponumi\LinkCreate\Web::create($text,[
