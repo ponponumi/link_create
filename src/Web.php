@@ -13,7 +13,7 @@ class Web{
     return $text;
   }
 
-  public static function create(string $text,array $get=["email","url"]){
+  public static function create(string $text,array $get=["email","url","hashtag"]){
     // aタグを作る
     $list = Core::arrangement($text,$get);
 

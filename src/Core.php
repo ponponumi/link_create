@@ -8,7 +8,7 @@ use Piscibus\PhpHashtag\Extractor;
 use Ponponumi\MatchPos\Search;
 
 class Core{
-  public static function get(string $text,array $type=["email","url"]){
+  public static function get(string $text,array $type=["email","url","hashtag"]){
     // データを取得する
     $email_list = [];
     $url_list = [];
@@ -41,7 +41,7 @@ class Core{
     return $merge_list;
   }
 
-  public static function arrangement(string $text,array $type=["email","url"]){
+  public static function arrangement(string $text,array $type=["email","url","hashtag"]){
     // データを整理する
     $result = [];
 
