@@ -140,6 +140,7 @@ class Web{
             $html_blank = self::blankSpace($item["link"],$url_internal,$url_blank_mode);
             $html .= '<a href="' . self::esc($item["link"]) . '"' . $html_blank . '>' . self::esc($item["text"]) . '</a>';
           }elseif(EmailSearch::check($item["link"])){
+            // メールアドレスなら
             $html .= '<a href="mailto:' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
           }elseif(mb_strpos($item["link"],"#") === 0){
             // ハッシュタグなら
