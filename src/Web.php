@@ -40,6 +40,36 @@ class Web{
     return $result;
   }
 
+  public static function blank(string $url,string $internal,$mode){
+    // blankを設定
+    $result = "";
+    $blank = 'target="_blank" rel="noopener noreferrer"';
+
+    switch ($mode) {
+      case 0:
+        // 常に無効の場合
+        break;
+
+      case 2:
+        // 常に有効の場合
+        $result = $blank;
+        break;
+
+      default:
+        // 外部リンクの場合のみ有効の場合
+        $external = Domain::externalLinkCheck($url,$internal);
+
+        if($external){
+          // 外部リンクであれば
+          $result = $blank;
+        }
+
+        break;
+    }
+
+    return $result;
+  }
+
   public static function create(string $text,array $option=[]){
     // aタグを作る
     $get = [];
