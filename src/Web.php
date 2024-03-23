@@ -28,6 +28,19 @@ class Web{
     // aタグを作る
     $get = [];
 
+    $hashtag_not = self::optionGet("hashtagNotGet",$option);
+    $hashtag_url = "";
+
+    if(!$hashtag_not){
+      // ハッシュタグを取得するなら
+      $hashtag_url = self::optionGet("hashtagUrl",$option,"");
+
+      if($hashtag_url !== ""){
+        // URLがあれば
+        $get[] = "hashtag";
+      }
+    }
+
     $list = Core::arrangement($text,$get);
 
     $html = "";
