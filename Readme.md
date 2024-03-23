@@ -68,15 +68,11 @@ $a = Web::create($text,$option);
 
 オプションについては、次のようになります。
 
-<div style="border: 1px solid gray; padding: 10px;">
-
-##### hashtagNotGet
+| ##### hashtagNotGet |
 
 trueの場合はハッシュタグが取得されません。
 
 初期状態ではfalseです。
-
-</div>
 
 ## ライセンスについて
 
