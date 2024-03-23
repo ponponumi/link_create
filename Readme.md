@@ -45,10 +45,13 @@ use Ponponumi\LinkCreate\Web;
 
 $text = "私は、PHPのサーバーサイド開発の方が好きかな #プログラミング #PHP";
 
-// aタグを生成
-$a = Web::create($text,[
+// オプション
+$option = [
   "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
-]);
+];
+
+// aタグを生成
+$a = Web::create($text,$option);
 
 ```
 
