@@ -13,6 +13,21 @@ class Web{
     return $text;
   }
 
+  public static function hashtagUrlCreate(string $hashtag,string $url,$hash_delete,$hash_encode){
+    // ハッシュタグのURLを置き換える
+    if($hash_delete){
+      // ハッシュタグの#を削除するなら
+      $hashtag = str_replace("#","",$hashtag);
+    }
+
+    if($hash_encode){
+      // URLエンコードするなら
+      $hashtag = urlencode($hashtag);
+    }
+
+    return str_replace("{hashtag}",$hashtag,$url);
+  }
+
   private static function optionGet(string $key,array $option,$default=false){
     // オプションを取得
     $result = $default;
