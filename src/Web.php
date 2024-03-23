@@ -89,6 +89,10 @@ class Web{
             $html .= '<a href="' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
           }elseif(EmailSearch::check($item["link"])){
             $html .= '<a href="mailto:' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
+          }elseif(mb_strpos($item["link"],"#") === 0){
+            // ハッシュタグなら
+            $item["link"] = self::hashtagUrlCreate($item["link"],$hashtag_url,$hash_delete,$hash_encode);
+            $html .= '<a href="' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
           }
         }else{
           // リンクがなければ
