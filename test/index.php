@@ -6,7 +6,7 @@ $text = "hello@example.com hoge@example.com http://example.com https://example.c
 $get = \Ponponumi\LinkCreate\Core::get($text);
 $list = \Ponponumi\LinkCreate\Core::arrangement($text);
 $a = \Ponponumi\LinkCreate\Web::create($text,[
-  "hashtagUrl" => 'http://localhost/search.php?tag={hashtag}',
+  "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
 ]);
 
 ?>
