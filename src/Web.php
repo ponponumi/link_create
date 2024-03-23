@@ -137,7 +137,8 @@ class Web{
           // リンクがあれば
           if(UrlSearch::check($item["link"])){
             // URLなら
-            $html .= '<a href="' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
+            $html_blank = self::blankSpace($item["link"],$url_internal,$url_blank_mode);
+            $html .= '<a href="' . self::esc($item["link"]) . '"' . $html_blank . '>' . self::esc($item["text"]) . '</a>';
           }elseif(EmailSearch::check($item["link"])){
             $html .= '<a href="mailto:' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
           }elseif(mb_strpos($item["link"],"#") === 0){
