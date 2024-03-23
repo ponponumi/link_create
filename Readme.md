@@ -68,7 +68,7 @@ $a = Web::create($text,$option);
 
 オプションについては、次のようになります。
 
-| ##### hashtagNotGet |
+##### hashtagNotGet
 
 trueの場合はハッシュタグが取得されません。
 
