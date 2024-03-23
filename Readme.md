@@ -8,6 +8,14 @@
 * メールアドレス
 * ハッシュタグ
 
+## Composerでのインストールについて
+
+次のコマンドを実行する事で、インストール可能です。
+
+```bash
+composer require ponponumi/link_create
+```
+
 ## このライブラリの挙動
 
 私のメールアドレスは、 hoge@example.com で、ホームページは https://example.com です！
