@@ -22,6 +22,6 @@
   &amp;nbsp;で、ホームページは&amp;nbsp;
   &lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; &gt;
     https://example.com
-    &lt;/a&gt;
+  &lt;/a&gt;
   &amp;nbsp;です！
 </pre>
