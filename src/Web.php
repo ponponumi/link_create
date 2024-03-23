@@ -143,14 +143,14 @@ class Web{
           if(UrlSearch::check($item["link"])){
             // URLなら
             $html_blank = self::blankSpace($item["link"],$url_internal,$url_blank_mode);
-            $html .= '<a href="' . self::esc($item["link"]) . '"' . $html_blank . '>' . self::esc($item["text"]) . '</a>';
+            $html .= self::anchor($item["text"], $item["link"], $html_blank);
           }elseif(EmailSearch::check($item["link"])){
             // メールアドレスなら
-            $html .= '<a href="mailto:' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
+            $html .= self::anchor($item["text"], "mailto:" . $item["link"]);
           }elseif(mb_strpos($item["link"],"#") === 0){
             // ハッシュタグなら
             $item["link"] = self::hashtagUrlCreate($item["link"],$hashtag_url,$hash_delete,$hash_encode);
-            $html .= '<a href="' . self::esc($item["link"]) . '">' . self::esc($item["text"]) . '</a>';
+            $html .= self::anchor($item["text"], $item["link"]);
           }
         }else{
           // リンクがなければ
