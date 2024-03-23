@@ -4,6 +4,7 @@ namespace Ponponumi\LinkCreate;
 
 use Ponponumi\UrlSearch\UrlSearch;
 use Ponponumi\EmailSearch\EmailSearch;
+use Ponponumi\UrlTool\Domain;
 
 class Web{
   public static function esc(string $text){
