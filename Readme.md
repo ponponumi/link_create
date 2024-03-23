@@ -16,14 +16,14 @@
 
 <pre>
   <code>
-    私のメールアドレスは、&nbsp;
-    <a href="mailto:hoge@example.com">
-    hoge@example.com
-    </a>
-    &nbsp;で、ホームページは&nbsp;
-    <a href="https://example.com" target="_blank" rel="noopener noreferrer" >
-    https://example.com
-    </a>
-    &nbsp;です！
+    私のメールアドレスは、&amp;nbsp;
+    &lt;a href=&quot;mailto:hoge@example.com&quot;&gt;
+      hoge@example.com
+    &lt;/a&gt;
+    &amp;nbsp;で、ホームページは&amp;nbsp;
+    &lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; &gt;
+      https://example.com
+      &lt;/a&gt;
+    &amp;nbsp;です！
   </code>
 </pre>
