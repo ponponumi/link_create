@@ -13,6 +13,17 @@ class Web{
     return $text;
   }
 
+  private static function optionGet(string $key,array $option,$default=false){
+    // オプションを取得
+    $result = $default;
+
+    if(array_key_exists($key,$option)){
+      $result = $option[$key];
+    }
+
+    return $result;
+  }
+
   public static function create(string $text,array $option=[]){
     // aタグを作る
     $get = [];
