@@ -58,6 +58,9 @@ class Web{
     // ハッシュの記号を消すかどうか
     $hash_delete = self::optionGet("hashDelete",$option,true);
 
+    // ハッシュタグをURLエンコードするかどうか
+    $hash_encode = self::optionGet("hashEncode",$option,true);
+
     $list = Core::arrangement($text,$get);
 
     $html = "";
