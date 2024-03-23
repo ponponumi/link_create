@@ -4,12 +4,15 @@ namespace Ponponumi\LinkCreate;
 
 use Ponponumi\EmailSearch\EmailSearch;
 use Ponponumi\UrlSearch\UrlSearch;
+use Piscibus\PhpHashtag\Extractor;
+use Ponponumi\MatchPos\Search;
 
 class Core{
   public static function get(string $text,array $type=["email","url"]){
     // データを取得する
     $email_list = [];
     $url_list = [];
+    $hashtag_list = [];
 
     if(in_array("email",$type)){
       // メールアドレスを取得するなら
@@ -21,7 +24,13 @@ class Core{
       $url_list = UrlSearch::searchPos($text);
     }
 
-    $merge_list = array_merge($email_list,$url_list);
+    if(in_array("hashtag",$type)){
+      // ハッシュタグを取得するなら
+      $hashtag_list = Extractor::extract($text);
+      $hashtag_list = Search::multibyte($text,$hashtag_list);
+    }
+
+    $merge_list = array_merge($email_list,$url_list,$hashtag_list);
 
     if($merge_list != []){
       usort($merge_list, function($a,$b){
