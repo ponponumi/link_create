@@ -34,9 +34,7 @@ composer require ponponumi/link_create
   &amp;nbsp;です！
 </pre>
 
-## 使い方について
-
-### HTMLとして取得する場合
+## HTMLとして取得する場合の使い方
 
 HTMLとして取得する場合、次の方法で取得可能です
 
@@ -64,18 +62,18 @@ $a = Web::create($text,$option);
 
 ```
 
-#### オプションについて
+## HTMLとして取得する場合のオプション
 
 オプションについては、次のようになります。
 
-##### hashtagNotGet
+### hashtagNotGet
 
 trueの場合はハッシュタグが取得されません。
 
 初期状態ではfalseです。
 
 
-##### hashtagUrl
+### hashtagUrl
 
 ハッシュタグ検索用のURLのベースです。
 
@@ -88,21 +86,21 @@ trueの場合はハッシュタグが取得されません。
 hashtagNotGetの設定に関わらず、この項目を設定しない場合、ハッシュタグはリンク化されません。
 
 
-##### emailNotGet
+### emailNotGet
 
 trueの場合はメールアドレスが取得されません。
 
 初期状態ではfalseです。
 
 
-##### urlNotGet
+### urlNotGet
 
 trueの場合はURLが取得されません。
 
 初期状態ではfalseです。
 
 
-##### blankMode
+### blankMode
 
 これは、HTMLの target=&quot;_blank&quot; と rel=&quot;noopener noreferrer&quot; を有効にするかどうかです。
 
