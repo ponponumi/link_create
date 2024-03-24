@@ -2,7 +2,7 @@
 
 <?php
 
-$text = "これはテストです hello@example.com hoge@example.com http://example.com https://example.com http://localhost:2230/ #PHP #こんにちは";
+$text = "これはテストです hello@example.com hoge@example.com http://example.com https://example.com http://localhost http://localhost:2230/ #PHP #こんにちは";
 $html_1 = \Ponponumi\LinkCreate\Web::create($text,[
   "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
 ]);
@@ -56,5 +56,6 @@ $html_9 = \Ponponumi\LinkCreate\Web::create($text,[
 <p><?= $html_6 ?></p>
 <p><?= $html_7 ?></p>
 <p><?= $html_8 ?></p>
+<p><?= $html_9 ?></p>
 
 <?php require __DIR__ . "/footer.php" ?>
