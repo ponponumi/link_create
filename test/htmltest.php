@@ -24,6 +24,21 @@ $html_5 = \Ponponumi\LinkCreate\Web::create($text,[
   "urlNotGet" => true,
 ]);
 
+$html_6 = \Ponponumi\LinkCreate\Web::create($text,[
+  "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
+  "blankMode" => 0,
+]);
+
+$html_7 = \Ponponumi\LinkCreate\Web::create($text,[
+  "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
+  "blankMode" => 1,
+]);
+
+$html_8 = \Ponponumi\LinkCreate\Web::create($text,[
+  "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
+  "blankMode" => 2,
+]);
+
 ?>
 
 <p><?= $text ?></p>
@@ -33,5 +48,8 @@ $html_5 = \Ponponumi\LinkCreate\Web::create($text,[
 <p><?= $html_3 ?></p>
 <p><?= $html_4 ?></p>
 <p><?= $html_5 ?></p>
+<p><?= $html_6 ?></p>
+<p><?= $html_7?></p>
+<p><?= $html_8 ?></p>
 
 <?php require __DIR__ . "/footer.php" ?>
