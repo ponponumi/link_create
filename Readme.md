@@ -155,7 +155,7 @@ $option = [
   "email",
 ];
 
-// aタグを生成
+// リストを生成
 $hit = Core::get($text,$option);
 
 // 出力結果
