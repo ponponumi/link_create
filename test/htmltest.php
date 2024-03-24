@@ -14,6 +14,11 @@ $html_3 = \Ponponumi\LinkCreate\Web::create($text,[
   "hashtagNotGet" => true,
 ]);
 
+$html_4 = \Ponponumi\LinkCreate\Web::create($text,[
+  "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
+  "emailNotGet" => true,
+]);
+
 ?>
 
 <p><?= $text ?></p>
@@ -21,5 +26,6 @@ $html_3 = \Ponponumi\LinkCreate\Web::create($text,[
 <p><?= $html_1 ?></p>
 <p><?= $html_2 ?></p>
 <p><?= $html_3 ?></p>
+<p><?= $html_4 ?></p>
 
 <?php require __DIR__ . "/footer.php" ?>
