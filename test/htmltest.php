@@ -41,7 +41,7 @@ $html_8 = \Ponponumi\LinkCreate\Web::create($text,[
 
 $html_9 = \Ponponumi\LinkCreate\Web::create($text,[
   "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
-  "internalUrl" => 'localhost',
+  "internalUrl" => 'http://localhost',
 ]);
 
 ?>
