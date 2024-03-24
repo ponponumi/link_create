@@ -49,7 +49,7 @@ $html_8 = \Ponponumi\LinkCreate\Web::create($text,[
 <p><?= $html_4 ?></p>
 <p><?= $html_5 ?></p>
 <p><?= $html_6 ?></p>
-<p><?= $html_7?></p>
+<p><?= $html_7 ?></p>
 <p><?= $html_8 ?></p>
 
 <?php require __DIR__ . "/footer.php" ?>
