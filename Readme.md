@@ -141,6 +141,40 @@ trueの場合は、ハッシュタグの部分が、urlencode関数でエンコ�
 初期状態ではtrueです。
 
 
+## 連想配列として取得する場合(一致データの取得)
+
+一致データの取得については、次の方法で行えます。
+
+```php
+use Ponponumi\LinkCreate\Core;
+
+$text = "メールアドレスは hoge@example.com です！";
+
+// オプション
+$option = [
+  "email",
+];
+
+// aタグを生成
+$hit = Core::get($text,$option);
+
+// 出力結果
+
+/*
+array(1) {
+  [0]=>
+  array(2) {
+    ["pos"]=>
+    int(9)
+    ["value"]=>
+    string(16) "hoge@example.com"
+  }
+}
+*/
+
+```
+
+
 ## 連想配列として取得する場合のオプション
 
 配列に、次の文字列を入力すると、それぞれ取得されます。
