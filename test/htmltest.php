@@ -44,6 +44,11 @@ $html_9 = \Ponponumi\LinkCreate\Web::create($text,[
   "internalUrl" => 'http://localhost',
 ]);
 
+$html_10 = \Ponponumi\LinkCreate\Web::create($text,[
+  "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
+  "hashDelete" => false,
+]);
+
 ?>
 
 <p><?= $text ?></p>
@@ -57,5 +62,6 @@ $html_9 = \Ponponumi\LinkCreate\Web::create($text,[
 <p><?= $html_7 ?></p>
 <p><?= $html_8 ?></p>
 <p><?= $html_9 ?></p>
+<p><?= $html_10 ?></p>
 
 <?php require __DIR__ . "/footer.php" ?>
