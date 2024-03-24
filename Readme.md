@@ -174,6 +174,53 @@ array(1) {
 
 ```
 
+## 連想配列として取得する場合(整理済みデータの取得)
+
+整理済みデータの取得については、次の方法で行えます。
+
+```php
+use Ponponumi\LinkCreate\Core;
+
+$text = "メールアドレスは hoge@example.com です！";
+
+// オプション
+$option = [
+  "email",
+];
+
+// リストを生成
+$hit = Core::arrangement($text,$option);
+
+// 出力結果
+
+/*
+array(3) {
+  [0]=>
+  array(2) {
+    ["text"]=>
+    string(25) "メールアドレスは "
+    ["link"]=>
+    NULL
+  }
+  [1]=>
+  array(2) {
+    ["text"]=>
+    string(16) "hoge@example.com"
+    ["link"]=>
+    string(16) "hoge@example.com"
+  }
+  [2]=>
+  array(2) {
+    ["text"]=>
+    string(10) " です！"
+    ["link"]=>
+    NULL
+  }
+}
+*/
+
+```
+
 
 ## 連想配列として取得する場合のオプション
 
