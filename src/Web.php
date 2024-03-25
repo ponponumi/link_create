@@ -142,8 +142,8 @@ class Web{
     $hash_encode = self::optionGet("hashEncode",$option,true);
 
     // 文字のエスケープ設定
-    $space_encode = self::optionGet("spaceEncode",$option,false);
-    $br_encode = self::optionGet("brEncode",$option,false);
+    $space_encode = self::optionGet("spaceEncode",$option,true);
+    $br_encode = self::optionGet("brEncode",$option,true);
 
     $str_encode_option = [
       "spaceEncode" => $space_encode,
