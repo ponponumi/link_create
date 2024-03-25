@@ -83,6 +83,7 @@ class Web{
 
   public static function anchor(string $text,string $link,array $convert_option=[]){
     // aタグを生成する
+    $blank = self::optionGet("blankSet",$convert_option,"");
     return '<a href="' . self::esc($link,$convert_option) . '"' . $blank . '>' . self::esc($text,$convert_option) . '</a>';
   }
 
