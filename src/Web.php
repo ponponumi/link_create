@@ -174,7 +174,7 @@ class Web{
           }
         }else{
           // リンクがなければ
-          $html .= self::esc($item["text"]);
+          $html .= self::esc($item["text"], $str_encode_option);
         }
       }
     }
