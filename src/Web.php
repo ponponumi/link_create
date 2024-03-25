@@ -83,7 +83,7 @@ class Web{
 
   public static function anchor(string $text,string $link,string $blank="",array $convert_option=[]){
     // aタグを生成する
-    return '<a href="' . self::esc($link) . '"' . $blank . '>' . self::esc($text) . '</a>';
+    return '<a href="' . self::esc($link,$convert_option) . '"' . $blank . '>' . self::esc($text,$convert_option) . '</a>';
   }
 
   public static function create(string $text,array $option=[]){
