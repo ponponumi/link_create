@@ -148,11 +148,13 @@ class Web{
 
     if($list !== []){
       foreach ($list as $item) {
+        $str_encode_option["blankSet"] = "";
+
         if($item["link"] !== null){
           // リンクがあれば
           if(UrlSearch::check($item["link"])){
             // URLなら
-            $html_blank = self::blankSpace($item["link"],$url_internal,$url_blank_mode);
+            $str_encode_option["blankSet"] = self::blankSpace($item["link"],$url_internal,$url_blank_mode);
             $html .= self::anchor($item["text"], $item["link"], $str_encode_option);
           }elseif(EmailSearch::check($item["link"])){
             // メールアドレスなら
