@@ -86,6 +86,11 @@ class Web{
     return $blank;
   }
 
+  public static function anchorCore(string $text,string $link,string $blank=""){
+    // aタグを生成するコア
+    return '<a href="' . $link . '"' . $blank . '>' . $text . '</a>';
+  }
+
   public static function anchor(string $text,string $link,string $blank=""){
     // aタグを生成する
     return '<a href="' . self::esc($link) . '"' . $blank . '>' . self::esc($text) . '</a>';
