@@ -142,6 +142,9 @@ class Web{
     // ハッシュタグをURLエンコードするかどうか
     $hash_encode = self::optionGet("hashEncode",$option,true);
 
+    // スペースをnbspに置き換えるかどうか
+    $nbsp_encode = self::optionGet("nbspEncode",$option,true);
+
     $list = Core::arrangement($text,$get);
 
     $html = "";
@@ -164,7 +167,7 @@ class Web{
           }
         }else{
           // リンクがなければ
-          $html .= self::esc($item["text"]);
+          $html .= self::esc($item["text"],$nbsp_encode);
         }
       }
     }
