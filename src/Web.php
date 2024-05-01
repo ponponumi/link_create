@@ -7,10 +7,15 @@ use Ponponumi\EmailSearch\EmailSearch;
 use Ponponumi\UrlTool\Domain;
 
 class Web{
-  public static function esc(string $text){
+  public static function esc(string $text,$nbspMode=true){
     // 特殊文字、スペース、改行を置き換える
     $text = htmlspecialchars($text,ENT_QUOTES,"UTF-8");
-    $text = str_replace([" ","\n"],["&nbsp;","<br>"],$text);
+    $text = str_replace("\n","<br>",$text);
+
+    if($nbspMode){
+      $text = str_replace(" ","&nbsp;",$text);
+    }
+
     return $text;
   }
 
