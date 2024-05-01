@@ -9,6 +9,11 @@ $a = \Ponponumi\LinkCreate\Web::create($text,[
   "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
 ]);
 
+$b = \Ponponumi\LinkCreate\Web::create($text,[
+  "hashtagUrl" => 'http://localhost:2230/search.php?tag={hashtag}',
+  "nbspEncode" => false,
+]);
+
 ?>
 
 <p><?= $text ?></p>
@@ -17,5 +22,6 @@ $a = \Ponponumi\LinkCreate\Web::create($text,[
 <pre><?php var_dump($list) ?></pre>
 
 <p><?= $a ?></p>
+<p><?= $b ?></p>
 
 <?php require __DIR__ . "/footer.php" ?>

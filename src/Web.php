@@ -7,10 +7,15 @@ use Ponponumi\EmailSearch\EmailSearch;
 use Ponponumi\UrlTool\Domain;
 
 class Web{
-  public static function esc(string $text){
+  public static function esc(string $text,$nbspMode=true){
     // 特殊文字、スペース、改行を置き換える
     $text = htmlspecialchars($text,ENT_QUOTES,"UTF-8");
-    $text = str_replace([" ","\n"],["&nbsp;","<br>"],$text);
+    $text = str_replace("\n","<br>",$text);
+
+    if($nbspMode){
+      $text = str_replace(" ","&nbsp;",$text);
+    }
+
     return $text;
   }
 
@@ -81,9 +86,14 @@ class Web{
     return $blank;
   }
 
+  public static function anchorCore(string $text,string $link,string $blank=""){
+    // aタグを生成するコア
+    return '<a href="' . $link . '"' . $blank . '>' . $text . '</a>';
+  }
+
   public static function anchor(string $text,string $link,string $blank=""){
     // aタグを生成する
-    return '<a href="' . self::esc($link) . '"' . $blank . '>' . self::esc($text) . '</a>';
+    return self::anchorCore(self::esc($text), self::esc($link), $blank);
   }
 
   public static function create(string $text,array $option=[]){
@@ -132,6 +142,9 @@ class Web{
     // ハッシュタグをURLエンコードするかどうか
     $hash_encode = self::optionGet("hashEncode",$option,true);
 
+    // スペースをnbspに置き換えるかどうか
+    $nbsp_encode = self::optionGet("nbspEncode",$option,true);
+
     $list = Core::arrangement($text,$get);
 
     $html = "";
@@ -154,7 +167,7 @@ class Web{
           }
         }else{
           // リンクがなければ
-          $html .= self::esc($item["text"]);
+          $html .= self::esc($item["text"],$nbsp_encode);
         }
       }
     }
